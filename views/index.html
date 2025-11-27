@@ -1,16 +1,287 @@
 <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Go Live Server - Proyecto</title>
-        <link rel="stylesheet" href="/style/styles.css">
-    </head>
-    <body>
-        <h1>¡Bienvenido a Go Live Server!</h1>
-        <p>Tu servidor de desarrollo está funcionando correctamente.</p>
-        <p>Edita este archivo en <code>views/index.html</code> para comenzar.</p>
-        
-    </body>
-    </html>
-      
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonn Trip - Zeitplan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .current-time {
+            text-align: center;
+            background: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+
+        .day-section {
+            margin-bottom: 30px;
+        }
+
+        .day-header {
+            background: #2196F3;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .event-card {
+            background: white;
+            border-left: 4px solid #ccc;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .event-card.past {
+            opacity: 0.4;
+            text-decoration: line-through;
+        }
+
+        .event-card.current {
+            border-left-color: #4CAF50;
+            background: #e8f5e9;
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(76,175,80,0.3);
+        }
+
+        .event-card.upcoming {
+            border-left-color: #2196F3;
+        }
+
+        .event-time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .event-title {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .event-details {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .event-location {
+            color: #2196F3;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .event-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚆 Bonn Trip Zeitplan</h1>
+        <div class="current-time" id="currentTime"></div>
+
+        <!-- Tag 1 -->
+        <div class="day-section">
+            <div class="day-header">Tag 1 - Anreise & Abendessen</div>
+
+            <div class="event-card" data-day="1" data-time="12:20-16:43">
+                <div class="event-time">12:20</div>
+                <div class="event-title">Treffpunkt & Zugfahrt nach Bonn</div>
+                <div class="event-details">Ankunft in Bonn: 16:43</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="16:43-17:00">
+                <div class="event-time">16:43 - 17:00</div>
+                <div class="event-title">Zu Fuss zur Tram-Station</div>
+                <div class="event-details">15 Min Fussweg zur Tram 63/16</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="17:00-17:20">
+                <div class="event-time">17:00 - 17:20</div>
+                <div class="event-title">Tram zur Unterkunft (Tram 63/16)</div>
+                <div class="event-location">📍 Aennchenplatz 4, Bad Godesberg, 53173 Bonn</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="17:20-17:50">
+                <div class="event-time">17:20 - 17:50</div>
+                <div class="event-title">Einchecken in Unterkunft</div>
+                <div class="event-details">Ca. 30 Minuten</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="17:50-18:35">
+                <div class="event-time">17:50 - 18:35</div>
+                <div class="event-title">Umziehen & Ready machen</div>
+                <div class="event-details">30-45 Min für Restaurant vorbereiten</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="18:35-19:00">
+                <div class="event-time">18:35 - 19:00</div>
+                <div class="event-title">Tram zum Restaurant (Tram 63/16)</div>
+                <div class="event-details">20 Min Fahrt</div>
+                <div class="event-location">📍 Ollenhauerstraße 1, 53113 Bonn</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="19:00-21:00">
+                <div class="event-time">19:00 - 21:00</div>
+                <div class="event-title">Restaurant - Abendessen</div>
+                <div class="event-details">Reservierung: 19:30 (ca. 1-2 Stunden)</div>
+                <div class="event-location">📍 Ollenhauerstraße 1, 53113 Bonn</div>
+            </div>
+
+            <div class="event-card" data-day="1" data-time="21:00-23:59">
+                <div class="event-time">Ab 21:00</div>
+                <div class="event-title">Freizeit oder zurück zur Unterkunft</div>
+            </div>
+        </div>
+
+        <!-- Tag 2 -->
+        <div class="day-section">
+            <div class="day-header">Tag 2 - Museum & Heimreise</div>
+
+            <div class="event-card" data-day="2" data-time="07:00-09:00">
+                <div class="event-time">Bis 09:00</div>
+                <div class="event-title">Aufstehen, Packen & Unterkunft putzen</div>
+                <div class="event-details">⚠️ Duschen muss jeder selber einrechnen!</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="09:00-09:30">
+                <div class="event-time">09:00 - 09:30</div>
+                <div class="event-title">Treffpunkt vor Unterkunft & Zmorge einkaufen</div>
+                <div class="event-details">20 Min Zeit in naher Umgebung</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="09:30-10:00">
+                <div class="event-time">09:30 - 10:00</div>
+                <div class="event-title">Zu Fuss zum Museum</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="10:00-11:00">
+                <div class="event-time">10:00 - 11:00</div>
+                <div class="event-title">Museum - Ausstellung anschauen</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="11:00-12:30">
+                <div class="event-time">11:00 - 12:30</div>
+                <div class="event-title">Workshop im Museum</div>
+                <div class="event-details">90 Minuten</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="12:30-14:45">
+                <div class="event-time">12:30 - 14:45</div>
+                <div class="event-title">Weitere Ausstellung oder Freizeit</div>
+                <div class="event-details">⚠️ Spätestens 14:45 am Bonn Hbf sein!</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="14:45-15:14">
+                <div class="event-time">14:45 - 15:14</div>
+                <div class="event-title">Alle am Bonn Hauptbahnhof</div>
+                <div class="event-details">⚠️ Spätestens 14:45 da sein!</div>
+            </div>
+
+            <div class="event-card" data-day="2" data-time="15:14-18:00">
+                <div class="event-time">15:14</div>
+                <div class="event-title">Zug Abfahrt - Gleis 3</div>
+                <div class="event-details">Nach Mannheim → Umsteigen → Basel SBB<br>Dann frei, wer wie wo heimgeht</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const events = [
+            { day: 1, start: "12:20", end: "16:43" },
+            { day: 1, start: "16:43", end: "17:00" },
+            { day: 1, start: "17:00", end: "17:20" },
+            { day: 1, start: "17:20", end: "17:50" },
+            { day: 1, start: "17:50", end: "18:35" },
+            { day: 1, start: "18:35", end: "19:00" },
+            { day: 1, start: "19:00", end: "21:00" },
+            { day: 1, start: "21:00", end: "23:59" },
+            { day: 2, start: "07:00", end: "09:00" },
+            { day: 2, start: "09:00", end: "09:30" },
+            { day: 2, start: "09:30", end: "10:00" },
+            { day: 2, start: "10:00", end: "11:00" },
+            { day: 2, start: "11:00", end: "12:30" },
+            { day: 2, start: "12:30", end: "14:45" },
+            { day: 2, start: "14:45", end: "15:14" },
+            { day: 2, start: "15:14", end: "18:00" }
+        ];
+
+        function timeToMinutes(time) {
+            const parts = time.split(':');
+            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+        }
+
+        function updateEvents() {
+            const now = new Date();
+            const currentDay = now.getDate();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            
+            document.getElementById('currentTime').textContent = 
+                'Aktuelle Zeit: ' + now.getHours().toString().padStart(2, '0') + ':' + 
+                now.getMinutes().toString().padStart(2, '0') +
+                ' (Tag ' + currentDay + ')';
+
+            document.querySelectorAll('.event-card').forEach((card, index) => {
+                const event = events[index];
+                const eventDay = event.day;
+                const startMinutes = timeToMinutes(event.start);
+                const endMinutes = timeToMinutes(event.end);
+
+                card.classList.remove('past', 'current', 'upcoming');
+
+                // Simplified: assumes first day of trip
+                if (currentMinutes >= endMinutes) {
+                    card.classList.add('past');
+                } else if (currentMinutes >= startMinutes && currentMinutes < endMinutes) {
+                    card.classList.add('current');
+                } else {
+                    card.classList.add('upcoming');
+                }
+            });
+        }
+
+        updateEvents();
+        setInterval(updateEvents, 60000);
+    </script>
+</body>
+</html>
