@@ -80,7 +80,6 @@ function createEventHTML(e) {
       <div class="event-time">
         <div class="time-tag">${e.time}</div>
       </div>
-      <div class="dot"></div>
       <div class="event-card">
         <div class="event-header">
           <h3 class="event-title">${e.title}</h3>

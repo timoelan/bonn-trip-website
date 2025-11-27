@@ -36,7 +36,7 @@ body {
 
 .hero-banner {
   width: 100%;
-  height: 350px;
+  height: 280px;
   background-image: url('bonn.webp');
   background-size: cover;
   background-position: center;
@@ -50,23 +50,24 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(10, 25, 41, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .hero-content {
-  padding: 30px 20px;
+  padding: 25px 20px;
   background: linear-gradient(135deg, #003d73 0%, #005AA9 100%);
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 600;
   margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .hero-subtitle {
-  font-size: 18px;
-  opacity: 0.85;
+  font-size: 16px;
+  opacity: 0.9;
   font-weight: 300;
 }
 
@@ -127,16 +128,20 @@ body {
 
 /* Current Time */
 .current-time-bar {
-  background: var(--surface);
-  padding: 20px;
-  border-bottom: 3px solid var(--bonn-gold);
+  background: #1a1a1a;
+  padding: 15px 20px;
+  border-bottom: 2px solid #333;
   text-align: center;
 }
 
 #currentTime {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--bonn-gold);
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  background: var(--bonn-blue);
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* Tabs */
@@ -244,18 +249,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,90,169,0.4);
 }
 
-.dot {
-  position: absolute;
-  left: 42px;
-  top: 25px;
-  width: 16px;
-  height: 16px;
-  background: var(--bonn-gold);
-  border: 3px solid var(--bg-dark);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--bonn-gold);
-  z-index: 2;
-}
+
 
 .event-card {
   background: var(--surface);
@@ -374,15 +368,88 @@ body {
   font-size: 14px;
 }
 
+/* Tablet */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 30px; }
+  .hero-banner { height: 220px; }
+  .countdown-box { padding: 20px; margin: 20px 15px 0; }
+  .event-card { padding: 18px; }
+}
+
 /* Mobile */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 32px; }
-  .countdown-display { gap: 10px; }
-  .time-unit { min-width: 70px; padding: 10px 15px; }
-  .time-num { font-size: 28px; }
-  .tabs-section .container { flex-direction: column; }
-  .timeline::before { left: 20px; }
-  .event { padding-left: 60px; }
-  .event-time { width: 50px; }
-  .dot { left: 12px; }
+@media (max-width: 600px) {
+  .hero h1 { font-size: 24px; }
+  .hero-subtitle { font-size: 14px; }
+  .hero-banner { height: 180px; }
+  .hero-content { padding: 20px 15px; }
+  
+  .countdown-box { 
+    padding: 15px; 
+    margin: 15px 10px 0; 
+  }
+  .countdown-title { font-size: 16px; margin-bottom: 15px; }
+  .countdown-display { 
+    gap: 8px; 
+    flex-wrap: wrap;
+  }
+  .time-unit { 
+    min-width: 65px; 
+    padding: 10px 12px; 
+  }
+  .time-num { font-size: 26px; }
+  .time-label { font-size: 10px; }
+  .countdown-info { font-size: 13px; }
+  
+  #currentTime { font-size: 12px; }
+  .current-time-bar { padding: 10px 15px; }
+  
+  .tabs-section { padding: 15px 0; }
+  .tabs-section .container { 
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .tab-btn { 
+    width: 100%; 
+    padding: 12px 20px; 
+    font-size: 14px;
+  }
+  
+  .container { padding: 0 15px; }
+  .timeline { padding: 30px 0; }
+  .timeline::before { left: 15px; }
+  
+  .event { 
+    padding-left: 50px; 
+    margin-bottom: 20px;
+  }
+  .event-time { 
+    width: 45px; 
+    left: -5px;
+  }
+  .time-tag { 
+    padding: 5px 8px; 
+    font-size: 12px; 
+  }
+  .dot { 
+    left: 7px; 
+    width: 12px; 
+    height: 12px;
+    top: 22px;
+  }
+  
+  .event-card { padding: 15px; }
+  .event-title { font-size: 17px; }
+  .event-location { font-size: 12px; margin-bottom: 8px; }
+  .event-desc { font-size: 13px; line-height: 1.4; }
+  .event-meta { gap: 10px; margin-top: 12px; }
+  .meta-tag { font-size: 11px; padding: 5px 10px; }
+  
+  .footer { padding: 30px 15px 15px; margin-top: 40px; }
+  .footer-grid { 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+  .footer-box h3 { font-size: 15px; margin-bottom: 10px; }
+  .footer-box p { font-size: 13px; line-height: 1.6; }
+  .footer-credit { font-size: 12px; }
 }
