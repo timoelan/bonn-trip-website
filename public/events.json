@@ -1,0 +1,192 @@
+{
+  "eventInfo": {
+    "title": "Bonn Teamevent",
+    "startDate": "2025-12-13",
+    "endDate": "2025-12-14",
+    "location": "Bonn, Deutschland"
+  },
+  "events": [
+    {
+      "id": 1,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "12:20",
+      "title": "Treffpunkt & Abfahrt Zürich",
+      "location": "Zürich HB",
+      "description": "Zug nach Bonn - Bitte pünktlich sein!",
+      "type": "travel",
+      "duration": "4h 23min",
+      "isCountdown": true
+    },
+    {
+      "id": 2,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "16:43",
+      "title": "Ankunft in Bonn",
+      "location": "Bonn Hauptbahnhof",
+      "description": "Wir sind da! 🎉",
+      "type": "arrival"
+    },
+    {
+      "id": 3,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "17:00",
+      "title": "Gepäck zur Unterkunft",
+      "location": "Aennchenplatz 4, Bad Godesberg, 53173 Bonn",
+      "description": "Tram 63/16 nehmen (20 Min Fahrt, 15 Min zu Fuß zur Haltestelle)",
+      "type": "transfer",
+      "mapsLink": "https://www.google.com/maps?q=Aennchenplatz+4,+Bad+Godesberg,+53173+Bonn,+Deutschland",
+      "duration": "20min"
+    },
+    {
+      "id": 4,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "17:30",
+      "title": "Einchecken in Unterkunft",
+      "location": "Aennchenplatz 4, Bad Godesberg",
+      "description": "Zimmer beziehen und einrichten",
+      "type": "accommodation",
+      "duration": "30min"
+    },
+    {
+      "id": 5,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "18:00",
+      "title": "Umziehen & Ready machen",
+      "location": "Unterkunft",
+      "description": "Frisch machen für's Restaurant",
+      "type": "preparation",
+      "duration": "30-45min"
+    },
+    {
+      "id": 6,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "18:45",
+      "title": "Transfer zum Restaurant",
+      "location": "Ollenhauerstraße 1, 53113 Bonn",
+      "description": "Tram 63/16 (20 Min)",
+      "type": "transfer",
+      "mapsLink": "https://www.google.com/maps?q=Ollenhauerstraße+1,+53113+Bonn,+Deutschland",
+      "duration": "20min"
+    },
+    {
+      "id": 7,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "19:30",
+      "title": "Abendessen im Restaurant",
+      "location": "Ollenhauerstraße 1, 53113 Bonn",
+      "description": "Reservierung - Gemeinsames Essen 🍽️",
+      "type": "food",
+      "duration": "1-2h",
+      "icon": "🍽️"
+    },
+    {
+      "id": 8,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "21:30",
+      "title": "Freizeit oder Unterkunft",
+      "location": "Bonn",
+      "description": "Optional: Stadt erkunden oder zurück zur Unterkunft",
+      "type": "free"
+    },
+    {
+      "id": 9,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "09:00",
+      "title": "Aufstehen & Packen",
+      "location": "Unterkunft",
+      "description": "Unterkunft putzen, duschen, packen - alles bereit machen",
+      "type": "preparation",
+      "icon": "🧳"
+    },
+    {
+      "id": 10,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "09:00",
+      "title": "Frühstück einkaufen",
+      "location": "Nähere Umgebung",
+      "description": "20 Min Zeit für Zmorge in der Umgebung",
+      "type": "food",
+      "duration": "20min",
+      "icon": "☕"
+    },
+    {
+      "id": 11,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "09:30",
+      "title": "Zum Museum laufen",
+      "location": "Auf dem Weg zum Museum",
+      "description": "Gemeinsam zum Museum",
+      "type": "transfer"
+    },
+    {
+      "id": 12,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "10:00",
+      "title": "Museum Ausstellung",
+      "location": "Museum Bonn",
+      "description": "Ausstellung anschauen",
+      "type": "activity",
+      "duration": "1h",
+      "icon": "🎨"
+    },
+    {
+      "id": 13,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "11:00",
+      "title": "Workshop im Museum",
+      "location": "Museum Bonn",
+      "description": "Interaktiver Workshop",
+      "type": "activity",
+      "duration": "90min",
+      "icon": "🎨"
+    },
+    {
+      "id": 14,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "12:30",
+      "title": "Museum weiter anschauen / Freizeit",
+      "location": "Museum oder Bonn",
+      "description": "Optional: Weiter im Museum oder Freizeit in Bonn",
+      "type": "free"
+    },
+    {
+      "id": 15,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "14:45",
+      "title": "Treffpunkt Bonn HB",
+      "location": "Bonn Hauptbahnhof",
+      "description": "⚠️ WICHTIG: Alle spätestens jetzt am Bahnhof!",
+      "type": "meeting",
+      "icon": "⚠️",
+      "isImportant": true
+    },
+    {
+      "id": 16,
+      "day": 2,
+      "date": "2025-12-14",
+      "time": "15:14",
+      "title": "Zug Abfahrt Heimreise",
+      "location": "Bonn HB Gleis 3",
+      "description": "Zug nach Mannheim → Basel SBB → Individuell nach Hause",
+      "type": "travel",
+      "icon": "🚂",
+      "isImportant": true,
+      "isCountdown": true
+    }
+  ]
+}

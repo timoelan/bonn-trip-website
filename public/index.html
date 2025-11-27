@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonn Teamevent 2025 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section mit Countdown -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo">🎵</div>
+            <h1>Bonn Teamevent</h1>
+            <p class="hero-subtitle">Beethoven-Stadt Abenteuer</p>
+            <div class="event-dates">
+                <span class="date-badge">13. - 14. Dezember 2025</span>
+            </div>
+        </div>
+        
+        <!-- Hauptcountdown -->
+        <div id="mainCountdown" class="main-countdown">
+            <div class="countdown-title">⏱️ Zug fährt ab in:</div>
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="time-block">
+                    <span class="time-value" id="days">00</span>
+                    <span class="time-label">Tage</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-value" id="hours">00</span>
+                    <span class="time-label">Stunden</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-value" id="minutes">00</span>
+                    <span class="time-label">Minuten</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-value" id="seconds">00</span>
+                    <span class="time-label">Sekunden</span>
+                </div>
+            </div>
+            <div class="countdown-subtitle" id="countdownSubtitle">
+                Zürich HB → Bonn
+            </div>
+        </div>
+    </header>
+
+    <!-- Aktueller Zeitpunkt -->
+    <div class="current-time-section">
+        <div class="container">
+            <div class="current-time">
+                <span class="clock-icon">🕐</span>
+                <span id="currentTime">Lade...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs für Tag 1 & 2 -->
+    <div class="tabs-container">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab active" data-day="1">
+                    📅 Tag 1 - Freitag
+                    <small>13. Dezember</small>
+                </button>
+                <button class="tab" data-day="2">
+                    📅 Tag 2 - Samstag
+                    <small>14. Dezember</small>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Timeline -->
+    <main class="container">
+        <div id="timeline" class="timeline">
+            <!-- Events werden hier dynamisch geladen -->
+        </div>
+    </main>
+
+    <!-- Info Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📍 Unterkunft</h3>
+                    <p>Aennchenplatz 4<br>Bad Godesberg<br>53173 Bonn</p>
+                </div>
+                <div class="footer-section">
+                    <h3>🚊 Transport</h3>
+                    <p>Tram 63/16<br>~20 Min Fahrt</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ℹ️ Wichtig</h3>
+                    <p>Pünktlich sein!<br>Alles einpacken<br>Viel Spaß! 🎉</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Bonn Teamevent 2025 • Made with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
