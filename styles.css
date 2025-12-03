@@ -333,11 +333,116 @@ body {
   text-decoration: underline;
 }
 
+/* VRR App Section */
+.vrr-section {
+  background: #1a1a1a;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-top: 2px solid #333;
+}
+
+.vrr-box {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vrr-box h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--bonn-blue);
+}
+
+.vrr-box p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.app-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #333;
+  transition: all 0.2s;
+  min-width: 180px;
+}
+
+.app-btn:hover {
+  background: #111;
+  border-color: var(--bonn-blue);
+  transform: translateY(-2px);
+}
+
+.app-btn.ios {
+  border-color: #147ce5;
+}
+
+.app-btn.android {
+  border-color: #3ddc84;
+}
+
+.app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.app-text small {
+  font-size: 11px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.app-text strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.vrr-link {
+  display: inline-block;
+  color: var(--bonn-gold);
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid var(--bonn-gold);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.vrr-link:hover {
+  background: var(--bonn-gold);
+  color: #000;
+}
+
 /* Footer */
 .footer {
   background: var(--surface);
   padding: 40px 20px 20px;
-  margin-top: 60px;
+  margin-top: 0;
   border-top: 3px solid var(--bonn-gold);
 }
 
@@ -444,7 +549,13 @@ body {
   .event-meta { gap: 10px; margin-top: 12px; }
   .meta-tag { font-size: 11px; padding: 5px 10px; }
   
-  .footer { padding: 30px 15px 15px; margin-top: 40px; }
+  .vrr-section { padding: 30px 15px; margin-top: 40px; }
+  .vrr-box h2 { font-size: 22px; }
+  .vrr-box p { font-size: 14px; margin-bottom: 20px; }
+  .app-buttons { flex-direction: column; align-items: center; gap: 15px; }
+  .app-btn { min-width: 200px; }
+  
+  .footer { padding: 30px 15px 15px; margin-top: 0; }
   .footer-grid { 
     grid-template-columns: 1fr; 
     gap: 20px; 

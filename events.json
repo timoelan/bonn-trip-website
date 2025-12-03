@@ -22,14 +22,34 @@
       "id": 2,
       "day": 1,
       "date": "2025-12-13",
-      "time": "16:43",
-      "title": "Ankunft in Bonn",
-      "location": "Bonn Hauptbahnhof",
-      "description": "Wir sind da! 🎉",
-      "type": "arrival"
+      "time": "13:32",
+      "title": "Ankunft Basel SBB",
+      "location": "Basel SBB",
+      "description": "Zwischenstopp in Basel",
+      "type": "transfer"
     },
     {
       "id": 3,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "13:39",
+      "title": "Abfahrt Basel SBB",
+      "location": "Basel SBB",
+      "description": "Weiterfahrt nach Bonn",
+      "type": "travel"
+    },
+    {
+      "id": 4,
+      "day": 1,
+      "date": "2025-12-13",
+      "time": "16:43",
+      "title": "Ankunft in Bonn",
+      "location": "Bonn Hauptbahnhof",
+      "description": "Wir sind da!",
+      "type": "arrival"
+    },
+    {
+      "id": 5,
       "day": 1,
       "date": "2025-12-13",
       "time": "17:00",
@@ -41,7 +61,7 @@
       "duration": "20min"
     },
     {
-      "id": 4,
+      "id": 6,
       "day": 1,
       "date": "2025-12-13",
       "time": "17:30",
@@ -52,7 +72,7 @@
       "duration": "30min"
     },
     {
-      "id": 5,
+      "id": 7,
       "day": 1,
       "date": "2025-12-13",
       "time": "18:00",
@@ -63,7 +83,7 @@
       "duration": "30-45min"
     },
     {
-      "id": 6,
+      "id": 8,
       "day": 1,
       "date": "2025-12-13",
       "time": "18:45",
@@ -75,19 +95,18 @@
       "duration": "20min"
     },
     {
-      "id": 7,
+      "id": 9,
       "day": 1,
       "date": "2025-12-13",
       "time": "19:30",
       "title": "Abendessen im Restaurant",
       "location": "Ollenhauerstraße 1, 53113 Bonn",
-      "description": "Reservierung - Gemeinsames Essen 🍽️",
+      "description": "Reservierung - Gemeinsames Essen",
       "type": "food",
-      "duration": "1-2h",
-      "icon": "🍽️"
+      "duration": "1-2h"
     },
     {
-      "id": 8,
+      "id": 10,
       "day": 1,
       "date": "2025-12-13",
       "time": "21:30",
@@ -97,18 +116,17 @@
       "type": "free"
     },
     {
-      "id": 9,
+      "id": 11,
       "day": 2,
       "date": "2025-12-14",
       "time": "09:00",
       "title": "Aufstehen & Packen",
       "location": "Unterkunft",
       "description": "Unterkunft putzen, duschen, packen - alles bereit machen",
-      "type": "preparation",
-      "icon": "🧳"
+      "type": "preparation"
     },
     {
-      "id": 10,
+      "id": 12,
       "day": 2,
       "date": "2025-12-14",
       "time": "09:00",
@@ -116,11 +134,10 @@
       "location": "Nähere Umgebung",
       "description": "20 Min Zeit für Zmorge in der Umgebung",
       "type": "food",
-      "duration": "20min",
-      "icon": "☕"
+      "duration": "20min"
     },
     {
-      "id": 11,
+      "id": 13,
       "day": 2,
       "date": "2025-12-14",
       "time": "09:30",
@@ -130,7 +147,7 @@
       "type": "transfer"
     },
     {
-      "id": 12,
+      "id": 14,
       "day": 2,
       "date": "2025-12-14",
       "time": "10:00",
@@ -138,11 +155,10 @@
       "location": "Museum Bonn",
       "description": "Ausstellung anschauen",
       "type": "activity",
-      "duration": "1h",
-      "icon": "🎨"
+      "duration": "1h"
     },
     {
-      "id": 13,
+      "id": 15,
       "day": 2,
       "date": "2025-12-14",
       "time": "11:00",
@@ -150,11 +166,10 @@
       "location": "Museum Bonn",
       "description": "Interaktiver Workshop",
       "type": "activity",
-      "duration": "90min",
-      "icon": "🎨"
+      "duration": "90min"
     },
     {
-      "id": 14,
+      "id": 16,
       "day": 2,
       "date": "2025-12-14",
       "time": "12:30",
@@ -164,19 +179,18 @@
       "type": "free"
     },
     {
-      "id": 15,
+      "id": 17,
       "day": 2,
       "date": "2025-12-14",
       "time": "14:45",
       "title": "Treffpunkt Bonn HB",
       "location": "Bonn Hauptbahnhof",
-      "description": "⚠️ WICHTIG: Alle spätestens jetzt am Bahnhof!",
+      "description": "WICHTIG: Alle spätestens jetzt am Bahnhof!",
       "type": "meeting",
-      "icon": "⚠️",
       "isImportant": true
     },
     {
-      "id": 16,
+      "id": 18,
       "day": 2,
       "date": "2025-12-14",
       "time": "15:14",
@@ -184,7 +198,6 @@
       "location": "Bonn HB Gleis 3",
       "description": "Zug nach Mannheim → Basel SBB → Individuell nach Hause",
       "type": "travel",
-      "icon": "🚂",
       "isImportant": true,
       "isCountdown": true
     }
