@@ -579,6 +579,11 @@ body {
   margin-bottom: 20px;
 }
 
+.station-card.important {
+  border-left-color: var(--bonn-gold);
+  background: linear-gradient(135deg, rgba(255, 184, 28, 0.05) 0%, #1a1a1a 100%);
+}
+
 .station-card h3 {
   font-size: 22px;
   font-weight: 600;
@@ -595,6 +600,34 @@ body {
 .station-info strong {
   color: #fff;
   font-weight: 500;
+}
+
+.ticket-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bonn-blue);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.ticket-link:hover {
+  background: #004a8f;
+  transform: translateX(5px);
+}
+
+.ticket-link .arrow {
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.ticket-link:hover .arrow {
+  transform: translateX(5px);
 }
 
 /* Slide-in Reminder */
